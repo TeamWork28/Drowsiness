@@ -23,17 +23,17 @@ Install the required packages using:
 pip install -r requirements.txt
 
 
-**## 1. Clone the repository:**
+## 1. Clone the repository:
 - git clone https://github.com/TeamWork28/Drowsiness.git
 
-**## 2. Navigate to the project directory:**
+## 2. Navigate to the project directory:
 - cd Drowsiness
 
-**## 3. Run the drowsiness detection script:**
+## 3. Run the drowsiness detection script:
 - python drowsiness_detect.py
 
-**## How It Works**
+## How It Works
 - The system uses Dlib's facial landmark detector to identify the eye regions in the driver's face. By calculating the Eye Aspect Ratio (EAR), it determines whether the eyes are closed. If the eyes remain closed for a specified duration, an alarm is sounded to alert the driver.
 
-**## Acknowledgments**
+## Acknowledgments
 - The Eye Aspect Ratio (EAR) concept is based on research by Tereza Soukupova and Jan Cech in their paper "Real-Time Eye Blink Detection using Facial Landmarks."
