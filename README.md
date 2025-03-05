@@ -1,55 +1,39 @@
-[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20Driver%20Drowsiness%20Detection%20project%20on%20Github%20&url=https://github.com/mohitwildbeast/Driver-Drowsiness-Detector/&hashtags=python,drowsiness-detector,opencv,computer-vision,machine-learning,deep-learning)  [![GitHub stars](https://img.shields.io/github/stars/mohitwildbeast/Driver-Drowsiness-Detector.svg?style=plastic)](https://github.com/mohitwildbeast/Driver-Drowsiness-Detector/stargazers)  [![GitHub forks](https://img.shields.io/github/forks/mohitwildbeast/Driver-Drowsiness-Detector.svg?style=plastic)](https://github.com/mohitwildbeast/Driver-Drowsiness-Detector/network)
+# Drowsiness Detection
+
+This project aims to detect driver drowsiness in real-time using computer vision techniques. The system alerts the driver when signs of drowsiness are detected to prevent potential accidents.
+
+## Features
+
+- **Real-time Detection**: Utilizes a webcam to monitor the driver's facial features continuously.
+- **Eye Aspect Ratio (EAR)**: Calculates the EAR to determine if the driver's eyes are closed.
+- **Drowsiness Alert**: Triggers an alarm if the eyes remain closed beyond a predefined threshold.
+
+## Requirements
+
+- Python 3.x
+- OpenCV
+- Dlib
+- Imutils
+- Scipy
+- Pygame
+
+Install the required packages using:
+
+```bash
+pip install -r requirements.txt
 
 
+**## 1. Clone the repository:**
+- git clone https://github.com/TeamWork28/Drowsiness.git
 
-This program is used to detect drowsiness for any given person. In this program we check how long a person's eyes have been closed for. If the eyes have been closed for a long period i.e. beyond a certain threshold value, the program will alert the user by playing an alarm sound.
+**## 2. Navigate to the project directory:**
+- cd Drowsiness
 
-The program contains 3 files, which are
-## Files
- - **face_and_eye_detector_single_image.py** - Detects face and eye from a single image.
- Demo-
- 
-|  ![Test Image](https://github.com/mohitwildbeast/Driver-Drowsiness-Detector/blob/master/images/test.jpeg)| ![Result Image](https://github.com/mohitwildbeast/Driver-Drowsiness-Detector/blob/master/images/result_face_detector_single_image.png) |
-|---|---|
+**## 3. Run the drowsiness detection script:**
+- python drowsiness_detect.py
 
- - **face_and_eye_detector_webcam_video.py** - Detects face and eye in a webcam feed by user![Webcam Face and Eye Detection](https://github.com/mohitwildbeast/Driver-Drowsiness-Detector/blob/master/images/webcam_face_eye_detect.jpeg)
- - **drowsiness_detect.py**- This script detects if person is drowsy or not using webcam video feed
+**## How It Works**
+- The system uses Dlib's facial landmark detector to identify the eye regions in the driver's face. By calculating the Eye Aspect Ratio (EAR), it determines whether the eyes are closed. If the eyes remain closed for a specified duration, an alarm is sounded to alert the driver.
 
-> DEMO
-![Drowsiness Detection Demo](https://github.com/mohitwildbeast/Driver-Drowsiness-Detector/blob/master/images/drowsiness_detector_demo.gif)
- 
- ## Requirements
-> 
-> IMPORTANT
-
-  Download `shape_predictor_68_face_landmarks.dat.bz2` from [Shape Predictor 68 features](http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2) 
-  Extract the file in the project folder using 
-  ``bzip2 -dk shape_predictor_68_face_landmarks.dat.bz2``
-
-
-    numpy==1.15.2
-	dlib==19.16.0
-	pygame==1.9.4
-	imutils==0.5.1
-	opencv_python==3.4.3.18
-	scipy==1.1.0
-Use `pip install -r requirements.txt`to install the given requirements.
-
-## Usage
-
-### Detect Face and Eyes in a Single Image
-Put your file to be detected in **images** folder with name **test.jpeg** or change the file path in `Line : 14 face_and_eye_detector_single_image.py` to your image file.                     
-Run script using:
-
-    python face_and_eye_detector_single_image.py
-
-### Detect Face and Eyes in a Webcam Feed
-Run script using:
-
-    python face_and_eye_detector_webcam_video.py
-### Drowsiness Detection
-Run script using:
-
-    python drowsiness_detect.py
-
-The algorithm for Eye Aspect Ratio was taken from pyimagesearch.com blog, by Adrian RoseBrock.
+**## Acknowledgments**
+- The Eye Aspect Ratio (EAR) concept is based on research by Tereza Soukupova and Jan Cech in their paper "Real-Time Eye Blink Detection using Facial Landmarks."
