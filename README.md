@@ -18,8 +18,6 @@ This project aims to detect driver drowsiness in real-time using computer vision
 - Pygame
 
 Install the required packages using:
-
-```bash
 pip install -r requirements.txt
 
 
